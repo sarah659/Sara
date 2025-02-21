@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sara</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f8;
+            padding: 20px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas: 
+                "header"
+                "nav"
+                "content"
+                "footer";
+            max-width: 1200px;
+            margin: auto;
+            gap: 20px;
+        }
+
+        header {
+            grid-area: header;
+            background: #e74c3c;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 600;
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            grid-area: nav;
+            background: #ffffff;
+            color: #2c3e50;
+            padding: 20px;
+            font-size: 22px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        nav:hover {
+            background-color: #f39c12;
+            transform: translateY(-5px);
+        }
+
+        .content {
+            grid-area: content;
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            gap: 30px;
+            padding: 30px;
+            min-height: 80vh; /* Increases the height of the content area */
+        }
+
+        .sidebar {
+            background: #16a085;
+            padding: 30px;
+            color: white;
+            font-size: 18px;
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        }
+
+        .sidebar:hover {
+            transform: translateY(-5px);
+            background-color: #1abc9c;
+        }
+
+        .main-content {
+            background: #f39c12;
+            color: white;
+            padding: 50px;
+            font-size: 24px;
+            font-weight: 600;
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease-in-out;
+        }
+
+        .main-content:hover {
+            transform: translateY(-5px);
+            background-color: #e67e22;
+        }
+
+        footer {
+            grid-area: footer;
+            background: #e74c3c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Link Styling */
+        a {
+            color: #00cec9;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: #0984e3;
+        }
+
+        /* Button Styling */
+        button {
+            background-color: #00cec9;
+            color: white;
+            font-size: 16px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #0984e3;
+            transform: scale(1.05);
+        }
+
+        /* Highlight Section */
+        .highlight {
+            background-color: #ffeaa7;
+            color: #2c3e50;
+            font-size: 20px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            text-align: center;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .highlight:hover {
+            background-color: #fab1a0;
+        }
+
+        /* Animation for Smooth Transitions */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="fade-in-up">Header</header>
+        <nav class="fade-in-up">Navigation Menu</nav>
+        <div class="content">
+            <aside class="sidebar fade-in-up">Sidebar Content</aside>
+            <section class="main-content fade-in-up">Main Content</section>
+            <aside class="sidebar fade-in-up">Sidebar Content</aside>
+        </div>
+        <footer class="fade-in-up">Footer</footer>
+    </div>
+
+    
+</body>
+</html>
